@@ -1,9 +1,9 @@
 // db/init.js
 const nano = require("nano")
+const couch = nano(process.env.COUCHDB_URL)
 
 let dbConnection = null
-let db = null
-
+const db = couch.db.use(process.env.DB_NAME); 
 /**
  * Initialise la connexion à la base de données CouchDB
  * @returns {Object} - Instance de la base de données
