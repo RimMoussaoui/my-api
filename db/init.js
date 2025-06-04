@@ -4,7 +4,7 @@ const couch = nano(process.env.COUCHDB_URL)
 
 let dbConnection = null
 const db = couch.db.use(process.env.DB_NAME); 
-/**
+/**git
  * Initialise la connexion à la base de données CouchDB
  * @returns {Object} - Instance de la base de données
  */
